@@ -1,10 +1,10 @@
-import React from 'react'
-import Button from './Button'
+import React, { memo } from 'react'
 
-export default function Navbar() {
+const Navbar = ({count}) => {
+  console.log("Navbar rendering")
   return (
-    <div>Navbar
-        <Button/>
-    </div>
+    <div>Navbar {count}</div>
   )
 }
+
+export default memo(Navbar)
